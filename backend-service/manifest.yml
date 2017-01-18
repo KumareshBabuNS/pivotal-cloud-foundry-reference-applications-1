@@ -1,0 +1,13 @@
+---
+applications:
+- name: backend-service
+  memory: 1024M
+  host: backend-service
+  domain: apps.prokarma.com
+  services:
+  - App autoscaler
+  - DiscoveryServer
+  - ConfigServer
+  - Hystrix Dashboard
+  env:
+    TRUST_CERTS: api.system.prokarma.com

@@ -1,0 +1,13 @@
+---
+applications:
+- name: shared-in-memory-db-service
+  memory: 512M
+  host: shared-in-memory-db-service
+  domain: apps.prokarma.com
+  services:
+  - App autoscaler
+  - DiscoveryServer
+  - ConfigServer
+  - Hystrix Dashboard
+  env:
+    TRUST_CERTS: api.system.prokarma.com
